@@ -16,7 +16,7 @@ public class EventSupplier {
             LoggerFactory.getLogger(EventSupplier.class);
 
     @Bean
-    public Supplier<Map<String, Object>> eventSupplier() {
+    public Supplier<Map<String, Object>> generateEvent() {
         return () -> {
             Map<String, Object> event = Map.of(
                     "id", UUID.randomUUID().toString(),
