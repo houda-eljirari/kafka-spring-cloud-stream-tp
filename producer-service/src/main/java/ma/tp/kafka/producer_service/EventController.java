@@ -27,10 +27,6 @@ public class EventController {
             throw new IllegalStateException("Impossible d'envoyer l'événement à Kafka");
         }
 
-        return Map.of(
-                "status", "sent",
-                "topic", "tp-events-docker",
-                "event", event
-        );
+        return Map.of("status", "sent", "topic", "tp-events-rest", "event", event);
     }
 }
